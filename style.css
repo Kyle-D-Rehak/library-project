@@ -1,0 +1,217 @@
+@font-face {
+    font-family: RobotoLight;
+    src: url(Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: RobotoRegular;
+    src: url(Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: RobotoMedium;
+    src: url(Roboto-Medium.ttf);
+}
+
+@font-face {
+    font-family: RobotoBold;
+    src: url(Roboto-Bold.ttf);
+}
+
+:root {
+    --bg-light: #f1f5f9;
+    --text-light: #0f172a;
+    --accent-light: #818cf8;
+    --bg-dark: #1e293b;
+    --text-dark: #e2e8f0;
+    --accent-dark: #0f172a;
+    --accent-med: #4f46e5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: RobotoRegular, sans-serif;
+}
+
+.text-light {
+    font-family: RobotoLight;
+}
+
+.text-reg {
+    font-family: RobotoRegular;
+}
+
+.text-med {
+    font-family: RobotoMedium;
+}
+
+.text-bold {
+    font-family: RobotoBold;
+}
+
+.xs-text {
+    font-size: .5rem;
+}
+
+.s-text {
+    font-size: .75rem;
+}
+
+.m-text {
+    font-size: 1rem;
+}
+
+.l-text {
+    font-size: 1.5rem;
+}
+
+.xl-text {
+    font-size: 2rem;
+}
+
+.flex-row{
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    align-items: stretch;
+}
+
+.grid{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: auto;
+}
+
+.button {
+    color: var(--text-dark);
+    background-color: var(--accent-med);
+    font-family: RobotoMedium;
+    font-size: 1.25rem;
+    border-style: none;
+    border-radius: .5rem;
+    padding: .5rem 2rem;
+}
+
+.button:hover {
+    background-color: var(--accent-light);
+    cursor: pointer;
+}
+
+.button-trans {
+    padding: .1rem;
+    color: var(--text-dark);
+    background-color: rgba(0, 0, 0, 0);
+    border-style: none;
+    transition-duration: .3s;
+    align-self: center;
+}
+
+.button-trans:hover {
+    color: var(--accent-light);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--bg-dark);
+}
+
+header {
+    color: var(--text-dark);
+    background-color: var(--accent-dark);
+    padding: 1rem 4rem;
+    justify-content: space-between;
+    text-align: center;
+    align-content: center;
+}
+
+#main {
+    color: var(--text-dark);
+    background-color: var(--bg-dark);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 22rem);
+    padding: 1rem 4rem;
+    gap: 1rem;
+}
+
+.card {
+    background-color: var(--accent-dark);
+    border-style: none;
+    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    width: 20rem;
+    height: 20rem;
+}
+
+#addCard {
+    order: 999999;
+}
+
+.card > .button {
+    width: 100%;
+}
+
+#form {
+    position: absolute;
+    font-size: large;
+    z-index: -10;
+}
+
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 80%;
+}
+
+.radioContainer {
+    display: flex;
+    gap: 2em;
+}
+
+.textInput {
+    padding: .5em;
+    border-style: none;
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+    font-family: RobotoRegular;
+    font-size: medium;
+}
+
+#cancelButton {
+    position: absolute;
+    background-color: transparent;
+    margin: .5em;
+    padding: 0;
+    width: 1em;
+    top: 0;
+    right: 0;
+}
+
+#cancelButton:hover {
+    color: var(--accent-light);
+    cursor: pointer;
+}
+
+.visible {
+    z-index: 10 !important;
+}
+
+.true {
+    background-color: rgb(97, 198, 97);
+}
+
+.false {
+    background-color: rgb(188, 86, 86);
+}

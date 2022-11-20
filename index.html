@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <header class="flex-row">
+        <h1 class="text-bold xl-text">library</h1>
+        <button class="button text-med l-text">Log in</button>
+    </header>
+    <main class="">
+        <div id="main">
+            <!-- 
+            <div class="card">
+                <h2>Title</h2>
+                <p>Author</p>
+                <p>234 pages</p>
+                <button class="button">Finished!</button>
+                <button class="button">Remove</button>
+            </div>
+            -->
+            <div class="card" id="addCard">
+                <button id="addButton" class="button-trans text-med l-text">+ add book</button> 
+                <form class="bookForm card" id="form">
+                    <div class="inputContainer">
+                        <label for="title">Title</label>
+                        <input class="textInput" type="text" id="title" name="title" required>
+                    </div>
+                    <div class="inputContainer">
+                        <label for="author">Author</label>
+                        <input class="textInput" type="text" id="author" name="author" required>
+                    </div>
+                    <div class="inputContainer">
+                        <label for="pages">Pages</label>
+                        <input class="textInput" type="number" id="pages" name="pages" min="1" max="21450" required>
+                    </div>
+                    <div class="radioContainer">
+                        <div>
+                            <input type="radio" id="hasRead" name="read" value="true">
+                            <label for="hasRead">Read</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="hasntRead" name="read" value="false" checked>
+                            <label for="hasntRead">Not read</label>
+                        </div>
+                    </div>
+                    <button class="button" type="submit" id="newBookButton">Add book!</button>
+                    <button class="button" type="button" id="cancelButton">x </button>
+            
+                </form>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
