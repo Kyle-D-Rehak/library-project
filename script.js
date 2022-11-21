@@ -81,5 +81,8 @@ form.addEventListener('submit', (e) => {
 });
 
 addButton.addEventListener('click', () => {form.classList.add('visible')});
-cancelButton.addEventListener('click', () => form.classList.remove('visible'));
+
+cancelButton.addEventListener('click', () => {
+    form.classList.remove('visible');
+    form.reset();});
 
